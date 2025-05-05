@@ -12,7 +12,7 @@ const Topbar = () => {
   };
 
   return (
-    <header className="bg-green-600 text-white px-6 py-4 flex justify-between items-center shadow-md">
+    <header className="bg-gray-800 text-teal-400 px-6 py-4 flex justify-between items-center shadow-md">
       <h1 className="text-lg font-semibold">Bienvenue, {user?.role}</h1>
       <button
         onClick={handleLogout}

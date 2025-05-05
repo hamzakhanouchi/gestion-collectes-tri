@@ -3,13 +3,17 @@
 @tailwind utilities;
 
 body {
-  @apply bg-gray-100 text-gray-800 font-sans;
+  @apply bg-gray-900 text-gray-100 font-sans; /* Dark background with light text */
 }
 
 h1, h2, h3, h4, h5, h6 {
-  @apply text-green-700;
+  @apply text-teal-400; /* Vibrant teal for headings */
 }
 
 button {
   @apply transition duration-300 ease-in-out;
+}
+
+a {
+  @apply text-teal-300 hover:text-teal-500; /* Modern link colors */
 }

@@ -1,13 +1,14 @@
 import React from 'react';
 import { Routes, Route } from 'react-router-dom';
 import Home from './pages/Home';
-import About from './pages/About';
 import Contact from './pages/Contact';
 import LoginRegister from './pages/LoginRegister';
+import FAQ from './pages/FAQ';
 import routesByRole from './routes';
 import DashboardLayout from './layouts/DashboardLayout';
 import ProtectedRoute from './components/ProtectedRoute';
 import PublicLayout from './layouts/PublicLayout';
+import RequestCollect from './dashboard/client/RequestCollect';
 
 function App() {
   return (
@@ -16,10 +17,11 @@ function App() {
         {/* Public Pages */}
         <Route element={<PublicLayout />}>
           <Route path="/" element={<Home />} />
-          <Route path="/about" element={<About />} />
+          {/* Supprimer la route "À propos" */}
           <Route path="/contact" element={<Contact />} />
           <Route path="/login" element={<LoginRegister />} />
           <Route path="/register" element={<LoginRegister />} />
+          <Route path="/faq" element={<FAQ />} />
         </Route>
 
         {/* Protected Dashboard Pages */}
@@ -33,6 +35,9 @@ function App() {
         >
           {routesByRole}
         </Route>
+
+        {/* Client Request Collect Page */}
+        <Route path="/client/demande" element={<RequestCollect />} />
 
         {/* Fallback for Undefined Routes */}
         <Route
